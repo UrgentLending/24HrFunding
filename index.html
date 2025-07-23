@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Urgent Lending - Fast Business Funding</title>
+  <title>Urgent Lending • Fast Business Funding</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
   <style>
-    /* Customize primary color and fonts */
     :root {
-      --bs-primary: #003366; /* Dark blue, change as you want */
+      --bs-primary: #003366;
       --bs-font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --about-bg: #f0f4f8; /* lighter blue-gray tone for about section */
     }
 
     body {
@@ -22,55 +25,44 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background-color: #fff;
     }
 
     main {
       flex: 1 0 auto;
     }
 
-    /* Section paddings */
+    /* Common spacing for all sections */
+    section {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    /* Hero Section */
     .hero {
       background-color: #e6f0ff;
-      padding: 80px 0;
-    }
-
-    .features {
-      padding: 60px 0;
-    }
-
-    .about {
-      background-color: #f8f9fa;
-      padding: 60px 0;
-    }
-
-    .contact {
-      padding: 60px 0;
-    }
-
-    /* Form label bold */
-    .form-label {
-      font-weight: 600;
-    }
-
-    /* Footer styling */
-    footer {
-      background-color: #f8f9fa;
-      flex-shrink: 0;
-    }
-
-    /* Visitor counter container */
-    .visitor-counter {
-      background-color: #f1f3f5;
-      padding: 10px 0;
       text-align: center;
-      font-size: 0.9rem;
-      color: #333;
-      font-weight: 600;
-      user-select: none;
-      flex-shrink: 0;
     }
 
-    /* Slogan styling */
+    /* Logo styling */
+    .logo-epic {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--bs-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    .logo-epic .bi-lightning-charge-fill {
+      font-size: 3.8rem;
+      color: #ff4500;
+      margin-left: 12px;
+      line-height: 1;
+    }
+
     .hero-slogan {
       font-size: 1.25rem;
       font-weight: 500;
@@ -78,10 +70,151 @@
       margin-bottom: 30px;
     }
 
-    /* Small responsive tweaks */
+    .lead {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Features Section */
+    .features {
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--bs-primary);
+      margin-bottom: 15px;
+    }
+
+    /* About Section with distinct background and styling */
+    .about {
+      background-color: var(--about-bg);
+      color: #1a1a1a;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 8px;
+      padding: 50px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+    .about h2 {
+      font-weight: 700;
+      margin-bottom: 25px;
+      text-align: center;
+      color: var(--bs-primary);
+    }
+    .about p {
+      line-height: 1.6;
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+    .about a {
+      color: #007bff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .about a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #fff;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact h2 {
+      font-weight: 700;
+      margin-bottom: 35px;
+      text-align: center;
+      color: var(--bs-primary);
+    }
+    label.form-label {
+      font-weight: 600;
+      color: var(--bs-primary);
+    }
+    input.form-control, select.form-select {
+      border-radius: 0.3rem;
+      border: 1.5px solid #ced4da;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    input.form-control:focus, select.form-select:focus {
+      border-color: #007bff;
+      box-shadow: none;
+      outline: none;
+    }
+    button.btn-primary {
+      width: 100%;
+      padding: 0.75rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 0.35rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f8f9fa;
+      padding: 30px 15px;
+      text-align: center;
+      color: #555;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    footer .d-flex {
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    footer a {
+      color: var(--bs-primary);
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    footer a:hover, footer a:focus {
+      color: #007bff;
+      text-decoration: none;
+    }
+    footer p {
+      margin: 0;
+      font-weight: 600;
+    }
+    footer .bilingual {
+      font-weight: 600;
+      color: var(--bs-primary);
+      font-size: 0.95rem;
+    }
+
+    /* Visitor counter centered and styled */
+    .visitor-counter {
+      background-color: #f1f3f5;
+      padding: 12px 0;
+      font-weight: 600;
+      color: #333;
+      user-select: none;
+      text-align: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin: 30px auto 20px;
+      max-width: 320px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive tweaks */
     @media (max-width: 576px) {
-      .hero h1 {
-        font-size: 2rem;
+      .logo-epic {
+        font-size: 2.2rem;
+      }
+      .logo-epic .bi-lightning-charge-fill {
+        font-size: 2.6rem;
+        margin-left: 8px;
       }
       .hero-slogan {
         font-size: 1.1rem;
@@ -91,11 +224,13 @@
 </head>
 <body>
   <main>
-    <!-- Hero Section -->
-    <section class="hero text-center">
+
+    <section class="hero">
       <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Urgent Lending</h1>
-        <p class="hero-slogan">Let us handle the risks, take the cash and grow your business.</p>
+        <h1 class="logo-epic">
+          Urgent Lending <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+        </h1>
+        <p class="hero-slogan">Let us handle the risks, take the cash, and grow your business.</p>
         <p class="lead mb-4">
           Specialized in funding business owners within 24 hours. Get the cash boost to grow, expand, and elevate your business without collateral or personal guarantees.
         </p>
@@ -103,56 +238,53 @@
       </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4 mb-4">
+            <i class="bi bi-lightning-charge-fill feature-icon" aria-hidden="true"></i>
             <h3>Fast Funding</h3>
-            <p>Receive funds within 24 hours to help your business grow—expansion, equipment, repairs, hiring, marketing, and more.</p>
+            <p>Receive funds within 24 hours to help your business grow, including expansion, equipment, repairs, hiring, marketing, and more.</p>
           </div>
           <div class="col-md-4 mb-4">
+            <i class="bi bi-shield-lock-fill feature-icon" aria-hidden="true"></i>
             <h3>No Collateral or Personal Guarantee</h3>
-            <p>We fund based on your business’s monthly revenue, no down payments or long waits for approval.</p>
+            <p>We fund based on your business’s monthly revenue, without down payments or long waiting for approval.</p>
           </div>
           <div class="col-md-4 mb-4">
+            <i class="bi bi-file-earmark-text-fill feature-icon" aria-hidden="true"></i>
             <h3>Simple Requirements</h3>
-            <p>All we need are your recent 4 months of bank statements, a one-page online application, photo of business check, and personal ID.</p>
+            <p>All we need are your recent four months of bank statements, a one-page online application, photo of business check, and personal ID.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="about">
       <div class="container">
-        <h2 class="mb-4 text-center">About Urgent Lending & Johnny Thai</h2>
+        <h2>About Urgent Lending and Johnny Thai</h2>
         <p>
-          At Urgent Lending, we specialize in providing business owners with quick cash advances—up to twice the amount your business generates monthly. Our streamlined process skips collateral, down payments, and personal guarantees, getting you funded fast.
+          At Urgent Lending, we specialize in providing business owners with quick cash advances up to twice the amount your business generates monthly. Our streamlined process skips collateral, down payments, and personal guarantees, getting you funded fast.
         </p>
         <p>
-          I'm Johnny Thai, director and head fund advisor at Wallvestment Capital. I’m not here just to sell—you’re getting someone who truly understands the challenges of running a business.
+          I'm Johnny Thai, director and head fund advisor at Wallvestment Capital. I’m not here just to sell, you’re getting someone who truly understands the challenges of running a business.
         </p>
         <p>
-          With over 10 years owning and managing a hair salon, plus experience as a General Manager overseeing 30+ employees in a seafood and steak restaurant, I know firsthand the pain points business owners face. Inventory, sales, marketing, staffing—I've been through it all.
+          With over ten years owning and managing a hair salon, plus experience as a General Manager overseeing more than thirty employees in a seafood and steak restaurant, I know firsthand the pain points business owners face, including inventory, sales, marketing, and staffing.
         </p>
         <p>
           My goal is simple: to help you succeed. Whatever I’ve learned from my journey, I’m honored to share with you. Let’s take your business to the next level, together.
         </p>
         <p>
-          Ready to get started? <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">Apply online here</a> or fill out the form below. We require 4 recent bank statements, a <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">one-page online application</a>, a photo of business check, and personal ID emailed to <a href="mailto:Johnny.Q.Thai@gmail.com">Johnny.Q.Thai@gmail.com</a>.
+          Ready to get started? <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">Apply online here</a> or fill out the form below. We require four recent months of bank statements, a one-page online application, a photo of your business check, and personal ID emailed to <a href="mailto:Johnny.Q.Thai@gmail.com">Johnny.Q.Thai@gmail.com</a>.
         </p>
       </div>
     </section>
 
-    <!-- Contact Form Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="mb-4 text-center">Contact Us</h2>
-
-        <!-- Using FormSubmit to send email without backend -->
+        <h2>Contact Us</h2>
         <form action="https://formsubmit.co/Johnny.Q.Thai@Gmail.com" method="POST">
-          
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="fullName" class="form-label">Full Name</label>
@@ -167,7 +299,7 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="phone" class="form-label">Phone</label>
-              <input type="tel" name="Phone" id="phone" class="form-control" placeholder="(xxx) xxx-xxxx" required />
+              <input type="tel" name="Phone" id="phone" class="form-control" placeholder="(xxx) xxx xxxx" required />
             </div>
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Email</label>
@@ -175,7 +307,6 @@
             </div>
           </div>
 
-          <!-- Business Type -->
           <div class="mb-3">
             <label for="businessType" class="form-label">Business Type</label>
             <select name="Business Type" id="businessType" class="form-select" required>
@@ -223,37 +354,35 @@
     </section>
   </main>
 
-  <!-- Contact Info Footer -->
-  <footer class="text-center py-4 bg-light d-flex flex-column align-items-center gap-2">
-    <div class="d-flex gap-3 mb-2">
+  <footer>
+    <div class="d-flex">
       <a href="https://www.linkedin.com/in/jt-director-headfundadvisor/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" style="text-decoration: none;">
-        <!-- LinkedIn SVG icon, 32px size -->
+        <!-- LinkedIn SVG icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0077B5" viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.268h-3v-4.5c0-1.071-.929-1.5-1.5-1.5s-1.5.429-1.5 1.5v4.5h-3v-9h3v1.2c.524-.8 1.533-1.2 2.5-1.2 2 0 3.5 1.293 3.5 4.2v4.8z"/>
         </svg>
       </a>
 
       <a href="https://www.facebook.com/profile.php?id=61558339632877" target="_blank" rel="noopener" aria-label="Facebook Profile" style="text-decoration: none;">
-        <!-- Facebook SVG icon, 32px size -->
+        <!-- Facebook SVG icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1877F2" viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .732.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123v9.293h6.116c.73 0 1.324-.592 1.324-1.324v-21.35c0-.732-.594-1.325-1.325-1.325z"/>
         </svg>
       </a>
     </div>
 
-    <p class="mb-1">
+    <p>
       Any questions? Please call or text: 
-      <a href="tel:+18324092455" class="fw-bold">(832) 409-2455</a> — instant response guaranteed
+      <a href="tel:+18324092455" class="fw-bold">(832) 409 2455</a> — instant response guaranteed
     </p>
 
-    <p class="mb-0 fw-semibold">Bilingual English &amp; Vietnamese</p>
+    <p class="fw-semibold">Bilingual English &amp; Vietnamese</p>
   </footer>
 
-  <!-- Visitor Counter -->
   <div class="visitor-counter">
     Visitors so far: 
     <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=7830914&style=0006&nbdigits=5&type=page&initCount=0" title="Visitor Count" alt="Visitor Count" border="0" />
+      <img src="https://hitwebcounter.com/counter/counter.php?page=7830914&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="Visitor Count" alt="Visitor Count" border="0" />
     </a>
   </div>
 
