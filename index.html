@@ -17,6 +17,15 @@
 
     body {
       font-family: var(--bs-font-family-base);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
     }
 
     /* Section paddings */
@@ -46,6 +55,19 @@
     /* Footer styling */
     footer {
       background-color: #f8f9fa;
+      flex-shrink: 0;
+    }
+
+    /* Visitor counter container */
+    .visitor-counter {
+      background-color: #f1f3f5;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      font-weight: 600;
+      user-select: none;
+      flex-shrink: 0;
     }
 
     /* Small responsive tweaks */
@@ -57,136 +79,137 @@
   </style>
 </head>
 <body>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Urgent Lending</h1>
+        <p class="lead mb-4">
+          Specialized in funding business owners within 24 hours. Get the cash boost to grow, expand, and elevate your business without collateral or personal guarantees.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-lg">Apply Now</a>
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Urgent Lending</h1>
-      <p class="lead mb-4">
-        Specialized in funding business owners within 24 hours. Get the cash boost to grow, expand, and elevate your business without collateral or personal guarantees.
-      </p>
-      <a href="#contact" class="btn btn-primary btn-lg">Apply Now</a>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <h3>Fast Funding</h3>
-          <p>Receive funds within 24 hours to help your business grow—expansion, equipment, repairs, hiring, marketing, and more.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h3>No Collateral or Personal Guarantee</h3>
-          <p>We fund based on your business’s monthly revenue, no down payments or long waits for approval.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h3>Simple Requirements</h3>
-          <p>All we need are your recent 4 months of bank statements, a one-page online application, photo of business check, and personal ID.</p>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <h3>Fast Funding</h3>
+            <p>Receive funds within 24 hours to help your business grow—expansion, equipment, repairs, hiring, marketing, and more.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h3>No Collateral or Personal Guarantee</h3>
+            <p>We fund based on your business’s monthly revenue, no down payments or long waits for approval.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h3>Simple Requirements</h3>
+            <p>All we need are your recent 4 months of bank statements, a one-page online application, photo of business check, and personal ID.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <h2 class="mb-4 text-center">About Urgent Lending & Johnny Thai</h2>
-      <p>
-        At Urgent Lending, we specialize in providing business owners with quick cash advances—up to twice the amount your business generates monthly. Our streamlined process skips collateral, down payments, and personal guarantees, getting you funded fast.
-      </p>
-      <p>
-        I'm Johnny Thai, director and head fund advisor at Wallvestment Capital. I’m not here just to sell—you’re getting someone who truly understands the challenges of running a business.
-      </p>
-      <p>
-        With over 10 years owning and managing a hair salon, plus experience as a General Manager overseeing 30+ employees in a seafood and steak restaurant, I know firsthand the pain points business owners face. Inventory, sales, marketing, staffing—I've been through it all.
-      </p>
-      <p>
-        My goal is simple: to help you succeed. Whatever I’ve learned from my journey, I’m honored to share with you. Let’s take your business to the next level, together.
-      </p>
-      <p>
-        Ready to get started? <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">Apply online here</a> or fill out the form below. We require 4 recent bank statements, a <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">one-page online application</a>, a photo of business check, and personal ID emailed to <a href="mailto:Johnny.Q.Thai@gmail.com">Johnny.Q.Thai@gmail.com</a>.
-      </p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2 class="mb-4 text-center">About Urgent Lending & Johnny Thai</h2>
+        <p>
+          At Urgent Lending, we specialize in providing business owners with quick cash advances—up to twice the amount your business generates monthly. Our streamlined process skips collateral, down payments, and personal guarantees, getting you funded fast.
+        </p>
+        <p>
+          I'm Johnny Thai, director and head fund advisor at Wallvestment Capital. I’m not here just to sell—you’re getting someone who truly understands the challenges of running a business.
+        </p>
+        <p>
+          With over 10 years owning and managing a hair salon, plus experience as a General Manager overseeing 30+ employees in a seafood and steak restaurant, I know firsthand the pain points business owners face. Inventory, sales, marketing, staffing—I've been through it all.
+        </p>
+        <p>
+          My goal is simple: to help you succeed. Whatever I’ve learned from my journey, I’m honored to share with you. Let’s take your business to the next level, together.
+        </p>
+        <p>
+          Ready to get started? <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">Apply online here</a> or fill out the form below. We require 4 recent bank statements, a <a href="https://wallvestment.com/home/apply?advisor=1052" target="_blank" rel="noopener">one-page online application</a>, a photo of business check, and personal ID emailed to <a href="mailto:Johnny.Q.Thai@gmail.com">Johnny.Q.Thai@gmail.com</a>.
+        </p>
+      </div>
+    </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="mb-4 text-center">Contact Us</h2>
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="mb-4 text-center">Contact Us</h2>
 
-      <!-- Using FormSubmit to send email without backend -->
-      <form action="https://formsubmit.co/Johnny.Q.Thai@Gmail.com" method="POST">
-        
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" name="Full Name" id="fullName" class="form-control" placeholder="Your full name" required />
+        <!-- Using FormSubmit to send email without backend -->
+        <form action="https://formsubmit.co/Johnny.Q.Thai@Gmail.com" method="POST">
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" name="Full Name" id="fullName" class="form-control" placeholder="Your full name" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="businessName" class="form-label">Business Name</label>
+              <input type="text" name="Business Name" id="businessName" class="form-control" placeholder="Your business name" required />
+            </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="businessName" class="form-label">Business Name</label>
-            <input type="text" name="Business Name" id="businessName" class="form-control" placeholder="Your business name" required />
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" name="Phone" id="phone" class="form-control" placeholder="(xxx) xxx-xxxx" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="Email" id="email" class="form-control" placeholder="name@example.com" required />
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="phone" class="form-label">Phone</label>
-            <input type="tel" name="Phone" id="phone" class="form-control" placeholder="(xxx) xxx-xxxx" required />
+          <!-- Business Type -->
+          <div class="mb-3">
+            <label for="businessType" class="form-label">Business Type</label>
+            <select name="Business Type" id="businessType" class="form-select" required>
+              <option value="" disabled selected>Select your business type</option>
+              <option value="Restaurant">Restaurant</option>
+              <option value="Retail">Retail</option>
+              <option value="Trucking">Trucking</option>
+              <option value="Beauty Salons">Beauty Salons</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Others">Others</option>
+            </select>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" name="Email" id="email" class="form-control" placeholder="name@example.com" required />
+
+          <div class="mb-3">
+            <label for="businessDuration" class="form-label">How long has your business been operating?</label>
+            <input type="text" name="Business Duration" id="businessDuration" class="form-control" placeholder="E.g. 3 years" required />
           </div>
-        </div>
 
-        <!-- Business Type -->
-        <div class="mb-3">
-          <label for="businessType" class="form-label">Business Type</label>
-          <select name="Business Type" id="businessType" class="form-select" required>
-            <option value="" disabled selected>Select your business type</option>
-            <option value="Restaurant">Restaurant</option>
-            <option value="Retail">Retail</option>
-            <option value="Trucking">Trucking</option>
-            <option value="Beauty Salons">Beauty Salons</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Others">Others</option>
-          </select>
-        </div>
+          <div class="mb-3">
+            <label for="liensBankruptcy" class="form-label">Any liens or bankruptcy in the past?</label>
+            <select name="Liens or Bankruptcy" id="liensBankruptcy" class="form-select" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
 
-        <div class="mb-3">
-          <label for="businessDuration" class="form-label">How long has your business been operating?</label>
-          <input type="text" name="Business Duration" id="businessDuration" class="form-control" placeholder="E.g. 3 years" required />
-        </div>
+          <div class="mb-3">
+            <label for="ficoScore" class="form-label">Credit FICO Score (approximate)</label>
+            <input type="number" name="FICO Score" id="ficoScore" class="form-control" min="300" max="850" placeholder="E.g. 720" required />
+          </div>
 
-        <div class="mb-3">
-          <label for="liensBankruptcy" class="form-label">Any liens or bankruptcy in the past?</label>
-          <select name="Liens or Bankruptcy" id="liensBankruptcy" class="form-select" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-          </select>
-        </div>
+          <!-- Honeypot for spam protection -->
+          <input type="text" name="_honey" style="display:none" />
 
-        <div class="mb-3">
-          <label for="ficoScore" class="form-label">Credit FICO Score (approximate)</label>
-          <input type="number" name="FICO Score" id="ficoScore" class="form-control" min="300" max="850" placeholder="E.g. 720" required />
-        </div>
+          <!-- Redirect to thank you page or show message -->
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
 
-        <!-- Honeypot for spam protection -->
-        <input type="text" name="_honey" style="display:none" />
+          <!-- Disable CAPTCHA (optional) -->
+          <input type="hidden" name="_captcha" value="false" />
 
-        <!-- Redirect to thank you page or show message -->
-        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
-
-        <!-- Disable CAPTCHA (optional) -->
-        <input type="hidden" name="_captcha" value="false" />
-
-        <button type="submit" class="btn btn-primary">Send Application</button>
-      </form>
-    </div>
-  </section>
+          <button type="submit" class="btn btn-primary">Send Application</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <!-- Contact Info Footer -->
   <footer class="text-center py-4 bg-light d-flex flex-column align-items-center gap-2">
@@ -213,6 +236,14 @@
 
     <p class="mb-0 fw-semibold">Bilingual English &amp; Vietnamese</p>
   </footer>
+
+  <!-- Visitor Counter -->
+  <div class="visitor-counter">
+    Visitors so far: 
+    <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
+      <img src="https://hitwebcounter.com/counter/counter.php?page=7830914&style=0006&nbdigits=5&type=page&initCount=0" title="Visitor Count" alt="Visitor Count" border="0" />
+    </a>
+  </div>
 
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
